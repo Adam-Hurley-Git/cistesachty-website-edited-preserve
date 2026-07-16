@@ -19,7 +19,7 @@ export const Route = createFileRoute("/o-nas")({
       {
         name: "description",
         content:
-          "Čisté šachty - místní specialista na čištění vzduchových a odvětrávacích šachet pro bytové domy, SVJ a správce nemovitostí v Hodoníně a okolí.",
+          "Čisté šachty - místní specialista na čištění odvětrávacích šachet pro bytové domy, SVJ a správce nemovitostí v Hodoníně a okolí.",
       },
     ],
   }),
@@ -75,9 +75,9 @@ function AboutPage() {
               <Accent>která dělá všechno.</Accent>
             </h2>
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
-              Soustředíme se na jednu věc: vzduchové a odvětrávací šachty v bytových domech. Díky
-              tomu známe typické objekty v regionu, víme, co u nich čekat, a celý postup máme
-              přizpůsobený tomu, jak SVJ a správci skutečně fungují.
+              Soustředíme se na jednu věc: odvětrávací šachty v bytových domech. Díky tomu známe
+              typické objekty v regionu, víme, co u nich čekat, a celý postup máme přizpůsobený
+              tomu, jak SVJ a správci skutečně fungují.
             </p>
             <p className="mt-4 max-w-xl text-lg leading-relaxed text-muted-foreground">
               Stavíme na co nejméně invazivním průběhu práce, věcné komunikaci a jasné dokumentaci

@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { BadgeCheck, Handshake, Layers, ScrollText, Search } from "lucide-react";
 
 import cisteni from "@/assets/extracted/cisteni.jpg";
-import dezinfekce from "@/assets/extracted/dezinfekce.jpg";
+import domecek from "@/assets/extracted/domecek.jpg";
 import kamera from "@/assets/extracted/kamera.jpg";
 import {
   Accent,
@@ -17,11 +17,11 @@ import {
 export const Route = createFileRoute("/cenik")({
   head: () => ({
     meta: [
-      { title: "Cena čištění vzduchových šachet | Čisté šachty" },
+      { title: "Cena čištění odvětrávacích šachet | Čisté šachty" },
       {
         name: "description",
         content:
-          "Co ovlivňuje cenu čištění vzduchových šachet v bytových domech? Přehled faktorů, orientační vysvětlení a možnost bezplatné kontroly objektu.",
+          "Co ovlivňuje cenu čištění odvětrávacích šachet v bytových domech? Přehled faktorů, orientační vysvětlení a možnost bezplatné kontroly objektu.",
       },
     ],
   }),
@@ -40,7 +40,7 @@ function PricingPage() {
             <Accent dark>konkrétního domu.</Accent>
           </>
         }
-        description="Každý objekt má jiný počet šachet, jinou výšku, jiný přístup na střechu i jiný stupeň zanesení. Proto neuvádíme obecný ceník bez kontextu — už při první bezplatné kontrole vám ale dokážeme vysvětlit, co bude mít na rozpočet největší vliv."
+        description="Každý objekt má jiný počet šachet, jinou výšku, jiný rozsah zanesení i jiné požadavky na dokumentaci. Proto neuvádíme obecný ceník bez kontextu — už při první bezplatné kontrole vám ale dokážeme vysvětlit, co bude mít na rozpočet největší vliv."
         primaryCta={{ label: "Zjistit orientační cenu", to: "/", hash: "kalkulacka" }}
         secondaryCta={{ label: "Domluvit bezplatnou kontrolu", to: "/", hash: "kontakt" }}
         badges={[
@@ -85,14 +85,14 @@ function PricingPage() {
             <ImageCard
               image={kamera}
               tag="Faktor 02"
-              title="Technické podmínky"
-              body="Důležitý je přístup na střechu, konkrétní řešení domu a skutečný stav i míra zanesení šachet."
+              title="Stav šachet"
+              body="Důležitý je skutečný stav, míra zanesení a konkrétní technické řešení odvětrávacích šachet v domě."
             />
             <ImageCard
-              image={dezinfekce}
+              image={domecek}
               tag="Faktor 03"
-              title="Doplňkové práce"
-              body="Rozpočet mění také požadovaný rozsah dokumentace, kontrola kamerou nebo dezinfekce."
+              title="Rozsah dokumentace"
+              body="Cenu může ovlivnit požadovaný rozsah fotodokumentace, protokolu a podkladů pro výbor, správce nebo technickou evidenci domu."
             />
           </div>
         </div>
@@ -117,10 +117,8 @@ function PricingPage() {
                 items={[
                   "počet šachet v objektu",
                   "výška a velikost domu",
-                  "přístup na střechu a technické podmínky",
                   "skutečný stav a míra zanesení",
                   "požadovaný rozsah dokumentace",
-                  "doplňkové služby — kontrola kamerou, dezinfekce",
                 ]}
               />
             </div>
@@ -178,7 +176,7 @@ function PricingPage() {
                 <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
                   Máte na stejný rozsah prací konkrétní písemnou nabídku od jiné firmy? Pošlete nám
                   ji. Pokud je ověřitelná a srovnatelná, vaši cenu porazíme — abyste za kvalitní
-                  čištění vzduchových šachet nikdy neplatili víc, než je potřeba.
+                  čištění odvětrávacích šachet nikdy neplatili víc, než je potřeba.
                 </p>
                 <p className="mt-4 text-base leading-relaxed text-muted-foreground">
                   Garance platí pro srovnatelný objekt, stejný typ a rozsah prací i obdobnou úroveň

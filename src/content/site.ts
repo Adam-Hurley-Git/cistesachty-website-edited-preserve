@@ -13,11 +13,9 @@ import {
 } from "lucide-react";
 
 import cisteni from "@/assets/extracted/cisteni.jpg";
-import dezinfekce from "@/assets/extracted/dezinfekce.jpg";
 import domecek from "@/assets/extracted/domecek.jpg";
 import final from "@/assets/extracted/final.png";
 import kamera from "@/assets/extracted/kamera.jpg";
-import penovani from "@/assets/extracted/penovani.jpg";
 import sachta from "@/assets/extracted/sachta-kamera.jpg";
 
 export const company = {
@@ -74,8 +72,8 @@ export const homeAudience = [
 
 export const services = [
   {
-    title: "Čištění vzduchových šachet",
-    body: "Mechanické odstranění nánosů a nečistot z odvětrávacích šachet v bytových domech.",
+    title: "Čištění a dezinfekce odvětrávacích šachet",
+    body: "Mechanické odstranění nánosů a nečistot z odvětrávacích šachet včetně dezinfekce jako součásti standardní služby.",
     image: cisteni,
     icon: SprayCan,
     href: "/sluzby",
@@ -105,8 +103,8 @@ export const services = [
 
 export const serviceHighlights = [
   {
-    title: "Čištění vzduchových šachet",
-    body: "Hlavní služba pro panelové a bytové domy, SVJ, bytová družstva a správce nemovitostí.",
+    title: "Čištění a dezinfekce odvětrávacích šachet",
+    body: "Hlavní služba pro panelové a bytové domy, SVJ, bytová družstva a správce nemovitostí. Dezinfekce je součástí standardního čištění.",
     image: cisteni,
   },
   {
@@ -115,14 +113,14 @@ export const serviceHighlights = [
     image: kamera,
   },
   {
-    title: "Dezinfekce",
-    body: "Podle typu objektu a rozsahu prací lze navázat i dezinfekčním ošetřením.",
-    image: dezinfekce,
+    title: "Fotodokumentace a protokol",
+    body: "Po práci předáváme přehledný výstup pro výbor, správce nebo technickou evidenci domu.",
+    image: sachta,
   },
   {
-    title: "Pěnové čištění",
-    body: "Pro vybrané typy zanesení je vhodné i pěnové čištění s důrazem na šetrný, kontrolovaný postup.",
-    image: penovani,
+    title: "Doporučení další údržby",
+    body: "Po kontrole nebo čištění navrhneme další postup podle skutečného stavu šachet.",
+    image: domecek,
   },
 ];
 
@@ -203,28 +201,28 @@ export const homeFaq = [
   {
     question: "Co ovlivňuje cenu?",
     answer:
-      "Hlavně počet šachet, velikost a výška objektu, přístup na střechu, míra zanesení a případné doplňkové práce, například kontrola kamerou nebo dezinfekce.",
+      "Cenu ovlivňuje hlavně počet šachet, velikost a výška objektu, míra zanesení a rozsah požadované dokumentace. Přesnou cenu potvrdíme po úvodním posouzení konkrétního domu.",
   },
 ];
 
 export const testimonials = [
   {
     quote:
-      "Potřebovali jsme mít jasno, v jakém stavu šachty skutečně jsou, a zároveň jsme nechtěli komplikovat situaci obyvatelům domu. Oceňujeme klidný průběh a přehledné podklady po dokončení.",
-    author: "Ukázková reference",
-    role: "předseda SVJ",
+      "Nechali jsme si vyčistit odvětrávací šachty včetně dezinfekce a byli jsme spokojeni. Vše proběhlo rychle, bez problémů a podle domluvy. Určitě můžeme doporučit",
+    author: "Vlastimil Bartaušic",
+    role: "Předseda SVJ sídl. Dukelských hrdinů 22,23, Břeclav",
   },
   {
     quote:
-      "Na spolupráci si ceníme hlavně věcné komunikace, jasného postupu a toho, že jsme po práci dostali dokumentaci, kterou jsme mohli rovnou založit do evidence domu.",
-    author: "Ukázková reference",
-    role: "správce nemovitosti",
+      "Zdravím pane Tučku i Vašeho kolegu, chtěla bych Vám poděkovat touto cestou za Vaši profesionální a perfektně odvedenou práci v našem bytovém domě, kde jste provedli dezinfekci a odmaštění větracích šachet a tím jste také přispěli ke zkvalitnění bydlení uživatelům jednotlivých bytů. Věřím, že se postupně přidají i další bytové domy a využijí Vašich kvalitních a hlavně potřebných služeb.",
+    author: "Marie Tomková",
+    role: "Předseda SVJ Slovácká 2710/2, Břeclav",
   },
   {
     quote:
-      "Dům nebyl zbytečně zatížený a celý postup byl dobře vysvětlený. Přesně takto má vypadat služba pro SVJ a bytové domy.",
-    author: "Ukázková reference",
-    role: "zástupce bytového družstva",
+      "Jde vidět, že čištění moc pomohlo a šachty jsou v daleko lepším stavu než před čištěním. Určitě Vaši firmu doporučím dalším předsedům! Moc děkuji za výborně odvedenou práci a perfektní jednání! Videa jsou super dokumentace.",
+    author: "Petr Jahoda",
+    role: "Předseda SVJ Pražská 8, Znojmo",
   },
 ];
 

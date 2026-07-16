@@ -11,7 +11,7 @@ export const Route = createFileRoute("/kontakt")({
       {
         name: "description",
         content:
-          "Kontaktujte Čisté šachty. Bezplatná kontrola vzduchových šachet pro SVJ, bytová družstva a správce nemovitostí v Hodoníně a okolí.",
+          "Kontaktujte Čisté šachty. Bezplatná kontrola odvětrávacích šachet pro SVJ, bytová družstva a správce nemovitostí v Hodoníně a okolí.",
       },
     ],
   }),

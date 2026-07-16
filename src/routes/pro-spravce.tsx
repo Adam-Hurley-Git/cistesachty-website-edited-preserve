@@ -29,7 +29,7 @@ export const Route = createFileRoute("/pro-spravce")({
       {
         name: "description",
         content:
-          "Partner pro správce nemovitostí v Hodoníně a okolí. Čištění vzduchových šachet s dokumentací, přehlednou komunikací a minimálním zásahem do provozu domu.",
+          "Partner pro správce nemovitostí v Hodoníně a okolí. Čištění odvětrávacích šachet s dokumentací, přehlednou komunikací a minimálním zásahem do provozu domu.",
       },
     ],
   }),
@@ -83,7 +83,7 @@ function ForManagersPage() {
               <Accent>ale spolehlivý proces.</Accent>
             </h2>
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
-              Pomáháme správcům bytových domů řešit stav vzduchových šachet bez zbytečných
+              Pomáháme správcům bytových domů řešit stav odvětrávacích šachet bez zbytečných
               komplikací pro obyvatele a bez nejasností po dokončení. Zakázka má předem jasný
               rozsah, domluvený termín a doložitelný výstup.
             </p>
@@ -165,7 +165,7 @@ function ForManagersPage() {
           <div className="card-soft overflow-hidden">
             <img
               src={pageImages.documentation}
-              alt="Dokumentace stavu vzduchové šachty"
+              alt="Dokumentace stavu odvětrávací šachty"
               className="h-[400px] w-full object-cover"
             />
           </div>

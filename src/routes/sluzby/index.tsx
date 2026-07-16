@@ -26,17 +26,17 @@ import {
 export const Route = createFileRoute("/sluzby/")({
   head: () => ({
     meta: [
-      { title: "Čištění vzduchových šachet | Čisté šachty Hodonín" },
+      { title: "Čištění odvětrávacích šachet | Čisté šachty Hodonín" },
       {
         name: "description",
         content:
-          "Profesionální čištění vzduchových a odvětrávacích šachet pro bytové domy, SVJ a správce nemovitostí. Bez vstupu do bytů, s fotodokumentací a protokolem.",
+          "Profesionální čištění a dezinfekce odvětrávacích šachet pro bytové domy, SVJ a správce nemovitostí v Hodoníně a okolí. Bez vstupu do bytů, s fotodokumentací a protokolem.",
       },
-      { property: "og:title", content: "Čištění vzduchových šachet | Čisté šachty Hodonín" },
+      { property: "og:title", content: "Čištění odvětrávacích šachet | Čisté šachty Hodonín" },
       {
         property: "og:description",
         content:
-          "Profesionální čištění vzduchových a odvětrávacích šachet pro bytové domy, SVJ a správce nemovitostí.",
+          "Profesionální čištění a dezinfekce odvětrávacích šachet pro bytové domy, SVJ a správce nemovitostí.",
       },
       { property: "og:url", content: "/sluzby" },
     ],
@@ -52,14 +52,14 @@ function ServicesPage() {
         eyebrow="Naše služby"
         title={
           <>
-            Čištění vzduchových šachet
+            Čištění odvětrávacích šachet
             <br />
             <Accent dark>s doložitelným výsledkem.</Accent>
           </>
         }
-        description="Čištění vzduchových a odvětrávacích šachet pomáhá udržet bytový dům v lepším technickém stavu, omezit šíření zápachu mezi byty a snížit rizika spojená se zanesením. Službu zajišťujeme pro panelové a bytové domy, SVJ, bytová družstva a správce nemovitostí v Hodoníně a okolí."
+        description="Čištění odvětrávacích šachet pomáhá udržet bytový dům v lepším technickém stavu, omezit šíření zápachu mezi byty a snížit rizika spojená se zanesením. Službu zajišťujeme pro panelové a bytové domy, SVJ, bytová družstva a správce nemovitostí v Hodoníně a okolí."
         image={pageImages.service}
-        imageAlt="Čištění vzduchové šachty v bytovém domě"
+        imageAlt="Čištění odvětrávací šachty v bytovém domě"
         primaryCta={{ label: "Domluvit bezplatnou kontrolu", to: "/", hash: "kontakt" }}
         secondaryCta={{ label: "Zjistit orientační cenu", to: "/", hash: "kalkulacka" }}
         badges={[
@@ -108,7 +108,7 @@ function ServicesPage() {
               image={serviceHighlights[0].image}
               tag="Hlavní služba"
               title={serviceHighlights[0].title}
-              body="Mechanické odstranění nánosů a nečistot z odvětrávacích šachet. Základ každé zakázky, přizpůsobený konkrétnímu domu."
+              body="Mechanické odstranění nánosů a nečistot z odvětrávacích šachet včetně dezinfekce jako standardní součásti služby."
             />
             <ImageCard
               image={serviceHighlights[1].image}
@@ -118,15 +118,15 @@ function ServicesPage() {
             />
             <ImageCard
               image={serviceHighlights[2].image}
-              tag="Doplňková služba"
+              tag="Výstup"
               title={serviceHighlights[2].title}
-              body="Podle typu objektu a rozsahu prací lze na čištění navázat dezinfekčním ošetřením šachet."
+              body="Po práci předáváme přehledný výstup pro výbor, správce nebo technickou evidenci domu."
             />
             <ImageCard
               image={serviceHighlights[3].image}
-              tag="Doplňková služba"
+              tag="Další krok"
               title={serviceHighlights[3].title}
-              body="Pro vybrané typy zanesení používáme pěnové čištění s důrazem na šetrný, kontrolovaný postup."
+              body="Po kontrole nebo čištění navrhneme další postup podle skutečného stavu šachet."
             />
           </div>
         </div>
@@ -151,7 +151,7 @@ function ServicesPage() {
                 items={[
                   "úvodní posouzení stavu šachet",
                   "návrh postupu a rozsahu prací",
-                  "mechanické vyčištění šachet",
+                  "mechanické vyčištění a dezinfekce šachet",
                   "kontrola kamerou podle rozsahu zakázky",
                   "fotodokumentace po dokončení",
                   "protokol o provedených pracích",
@@ -165,7 +165,7 @@ function ServicesPage() {
             <div className="card-soft overflow-hidden">
               <img
                 src={pageImages.documentation}
-                alt="Kontrola vzduchové šachty kamerou"
+                alt="Kontrola odvětrávací šachty kamerou"
                 className="h-[260px] w-full object-cover"
               />
             </div>

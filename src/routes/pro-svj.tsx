@@ -29,7 +29,7 @@ export const Route = createFileRoute("/pro-svj")({
       {
         name: "description",
         content:
-          "Čištění vzduchových šachet pro SVJ bez vstupu do bytů. Přehledný postup, fotodokumentace a protokol pro výbor. Hodonín a okolí.",
+          "Čištění odvětrávacích šachet pro SVJ bez vstupu do bytů. Přehledný postup, fotodokumentace a protokol pro výbor. Hodonín a okolí.",
       },
     ],
   }),

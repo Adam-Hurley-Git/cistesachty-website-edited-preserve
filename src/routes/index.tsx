@@ -22,7 +22,6 @@ import {
 } from "lucide-react";
 
 import cisteni from "@/assets/extracted/cisteni.jpg";
-import dezinfekce from "@/assets/extracted/dezinfekce.jpg";
 import domecek from "@/assets/extracted/domecek.jpg";
 import final from "@/assets/extracted/final.png";
 import kamera from "@/assets/extracted/kamera.jpg";
@@ -32,17 +31,17 @@ import { company, towns } from "@/content/site";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Čištění vzduchových šachet Hodonín | Čisté šachty" },
+      { title: "Čištění odvětrávacích šachet Hodonín | Čisté šachty" },
       {
         name: "description",
         content:
-          "Čištění vzduchových a odvětrávacích šachet pro SVJ, bytová družstva a správce nemovitostí v Hodoníně a okolí. Bez vstupu do bytů, s fotodokumentací a protokolem.",
+          "Čištění odvětrávacích šachet pro SVJ, bytová družstva a správce nemovitostí v Hodoníně a okolí. Bez vstupu do bytů, s fotodokumentací a protokolem.",
       },
-      { property: "og:title", content: "Čištění vzduchových šachet Hodonín | Čisté šachty" },
+      { property: "og:title", content: "Čištění odvětrávacích šachet Hodonín | Čisté šachty" },
       {
         property: "og:description",
         content:
-          "Čištění vzduchových a odvětrávacích šachet pro SVJ, bytová družstva a správce nemovitostí v Hodoníně a okolí.",
+          "Čištění odvětrávacích šachet pro SVJ, bytová družstva a správce nemovitostí v Hodoníně a okolí.",
       },
       { property: "og:url", content: "/" },
     ],
@@ -76,10 +75,8 @@ function HomePage() {
       <Documentation />
       <WhoWeHelp />
       <BeforeAfter />
-      <PricingFactors />
       <Testimonials />
       <FAQ />
-      <Contact />
       <SiteFooter />
     </div>
   );
@@ -90,7 +87,7 @@ function Hero() {
     <section className="relative flex min-h-[100svh] flex-col overflow-hidden text-cream">
       <img
         src={final}
-        alt="Technik při čištění vzduchové šachty na střeše panelového domu"
+        alt="Technik při čištění odvětrávací šachty na střeše panelového domu"
         className="absolute inset-0 h-full w-full object-cover"
       />
       <div
@@ -103,15 +100,11 @@ function Hero() {
       <div className="container-x relative flex flex-1 flex-col items-center justify-center py-32 text-center">
         <span className="eyebrow text-forest-light">Hodonín · Jižní Morava</span>
         <h1 className="mt-5 max-w-4xl text-5xl font-sans font-medium leading-[1.04] tracking-[-0.04em] text-cream md:text-6xl lg:text-7xl">
-          Čisté šachty,{" "}
-          <em className="not-italic" style={{ color: "var(--forest-light)" }}>
-            klidný dům
-          </em>{" "}
-          a jasný protokol pro výbor.
+          Čisté šachty jako základ požární prevence a bezpečí celého domu.
         </h1>
         <p className="mt-7 max-w-2xl text-lg leading-relaxed text-cream/80">
-          Profesionální čištění vzduchových šachet pro SVJ, bytová družstva a správce. Bez vstupu do
-          bytů, s bezplatnou vstupní kontrolou a jasným výsledkem pro celý dům.
+          Profesionální čištění odvětrávacích šachet pro SVJ, bytová družstva a správce. Bez vstupu
+          do bytů, s bezplatnou vstupní kontrolou a jasným výsledkem pro celý dům.
         </p>
         <div className="mt-9 flex flex-wrap justify-center gap-3">
           <a href="#kontakt" className="btn-primary">
@@ -151,7 +144,7 @@ function Hero() {
 function TrustBar() {
   const items = [
     { key: "Místní firma", value: "Pro Hodonín a okolí" },
-    { key: "Bez vstupu", value: "Do bytů ve většině případů" },
+    { key: "Bez vstupu do bytů", value: "Ve většině případů" },
     { key: "Garance ceny", value: "Porazíme ověřenou nabídku" },
     { key: "Bezplatná kontrola", value: "Nezávazné posouzení na místě" },
   ];
@@ -186,8 +179,8 @@ function PriceCalculatorSection() {
             </em>
           </h2>
           <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-            Nastavte počet šachet, podlaží a doplňkové služby a podle zadání připravíme orientační
-            odhad ceny. Pošleme vám ho na e-mail, ať ho máte pro výbor nebo správce po ruce.
+            Nastavte počet šachet a podlaží a podle zadání připravíme orientační odhad ceny. Pošleme
+            vám ho na e-mail, ať ho máte pro výbor nebo správce po ruce.
           </p>
           <ul className="mt-8 space-y-4">
             {[
@@ -232,10 +225,6 @@ function PriceCalculatorSection() {
 function PriceCalculatorCard() {
   const [shafts, setShafts] = useState(8);
   const [floors, setFloors] = useState(6);
-  const [access, setAccess] = useState<"easy" | "normal" | "hard">("normal");
-  const [camera, setCamera] = useState(true);
-  const [disinfection, setDisinfection] = useState(false);
-  const [foam, setFoam] = useState(false);
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
@@ -246,19 +235,15 @@ function PriceCalculatorCard() {
   // the visitor submits their contact details below.
   const estimate = useMemo(() => {
     // Illustrative model only — real pricing is confirmed during the free survey.
-    const accessFactor = access === "easy" ? 0.92 : access === "hard" ? 1.18 : 1;
     const perShaft = 420 + floors * 110;
-    let base = shafts * perShaft * accessFactor;
-    if (camera) base += shafts * 140;
-    if (disinfection) base += shafts * 190;
-    if (foam) base += base * 0.16;
+    const base = shafts * perShaft;
 
     const mid = Math.round(base / 100) * 100;
     return {
       low: Math.round((mid * 0.88) / 100) * 100,
       high: Math.round((mid * 1.12) / 100) * 100,
     };
-  }, [shafts, floors, access, camera, disinfection, foam]);
+  }, [shafts, floors]);
 
   // Referenced so the estimate is clearly "used" (sent by email) without
   // ever being rendered in the UI.
@@ -296,39 +281,6 @@ function PriceCalculatorCard() {
           onChange={setFloors}
           suffix="podlaží"
         />
-      </div>
-
-      <div className="mt-5">
-        <div className="mb-1.5 text-sm font-medium">Přístup na střechu</div>
-        <div className="grid grid-cols-3 gap-2">
-          {[
-            { id: "easy", label: "Snadný" },
-            { id: "normal", label: "Běžný" },
-            { id: "hard", label: "Náročný" },
-          ].map((opt) => (
-            <button
-              key={opt.id}
-              type="button"
-              onClick={() => setAccess(opt.id as typeof access)}
-              className={`rounded-xl border px-2 py-2 text-sm font-medium transition ${
-                access === opt.id
-                  ? "border-primary bg-primary text-cream"
-                  : "border-border bg-background hover:border-primary/40"
-              }`}
-            >
-              {opt.label}
-            </button>
-          ))}
-        </div>
-      </div>
-
-      <div className="mt-5">
-        <div className="mb-1.5 text-sm font-medium">Doplňkové služby</div>
-        <div className="grid gap-2 sm:grid-cols-3">
-          <Toggle label="Kontrola kamerou" checked={camera} onChange={setCamera} />
-          <Toggle label="Dezinfekce" checked={disinfection} onChange={setDisinfection} />
-          <Toggle label="Pěnové čištění" checked={foam} onChange={setFoam} />
-        </div>
       </div>
 
       <div className="mt-6 flex items-center gap-3 rounded-2xl border border-border bg-secondary px-4 py-3">
@@ -512,7 +464,7 @@ function WhyCleanSoon() {
             </span>
           </h2>
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
-            Ve vzduchových šachtách se během let usazují nečistoty, které mohou zhoršovat kvalitu
+            V odvětrávacích šachtách se během let usazují nečistoty, které mohou zhoršovat kvalitu
             vzduchu v domě, přispívat k šíření zápachu mezi byty a zvyšovat provozní i bezpečnostní
             rizika. U starších panelových domů navíc nebývá skutečný stav šachet dlouho vidět, dokud
             se nezačnou objevovat stížnosti obyvatel nebo technické problémy.
@@ -561,8 +513,8 @@ function Services() {
   const services = [
     {
       image: cisteni,
-      title: "Čištění vzduchových šachet",
-      body: "Mechanické odstranění nánosů a nečistot z odvětrávacích šachet v bytových domech.",
+      title: "Čištění a dezinfekce odvětrávacích šachet",
+      body: "Mechanické odstranění nánosů a nečistot z odvětrávacích šachet včetně dezinfekce jako součásti standardního čištění.",
       tag: "Hlavní služba",
     },
     {
@@ -570,12 +522,6 @@ function Services() {
       title: "Kontrola kamerou",
       body: "Prověření stavu šachty před prací i po dokončení, aby byl výsledek doložitelný.",
       tag: "Kontrola",
-    },
-    {
-      image: dezinfekce,
-      title: "Dezinfekce šachet",
-      body: "Podle typu objektu lze na čištění navázat dezinfekčním ošetřením a omezit šíření zápachu i bakterií mezi byty.",
-      tag: "Doplňková služba",
     },
     {
       image: domecek,
@@ -606,7 +552,7 @@ function Services() {
             Domluvit bezplatnou kontrolu <ArrowRight className="h-4 w-4" />
           </a>
         </div>
-        <div className="mt-12 grid gap-5 md:grid-cols-2">
+        <div className="mt-12 grid gap-5 md:grid-cols-3">
           {services.map((service) => (
             <article key={service.title} className="card-soft group overflow-hidden">
               <div className="aspect-[16/10] overflow-hidden">
@@ -903,84 +849,25 @@ function Placeholder({ label, tone }: { label: string; tone: "grim" | "clean" })
   );
 }
 
-function PricingFactors() {
-  const factors = [
-    {
-      title: "Rozsah objektu",
-      body: "Cenu ovlivňuje počet šachet v objektu, velikost domu a výška budovy.",
-      image: cisteni,
-    },
-    {
-      title: "Technické podmínky",
-      body: "Důležitý je přístup na střechu, konkrétní řešení domu a skutečný stav šachet.",
-      image: kamera,
-    },
-    {
-      title: "Doplňkové práce",
-      body: "Rozpočet mění také požadovaný rozsah dokumentace, kontrola kamerou nebo dezinfekce.",
-      image: dezinfekce,
-    },
-  ];
-
-  return (
-    <section id="cenik" className="bg-secondary py-20 md:py-28">
-      <div className="container-x">
-        <div className="max-w-3xl">
-          <span className="eyebrow">Co ovlivňuje cenu</span>
-          <h2 className="mt-4 text-4xl leading-tight md:text-5xl">
-            Přesnou cenu určíme podle
-            <em className="not-italic" style={{ color: "var(--forest)" }}>
-              {" "}
-              konkrétního domu.
-            </em>
-          </h2>
-          <p className="mt-5 text-lg text-muted-foreground">
-            Přesnou cenu nelze určit bez znalosti konkrétního domu. Každý objekt má jiný počet
-            šachet, jinou výšku, jiný přístup na střechu i jiný stupeň zanesení. Přesto vám už při
-            první kontrole dokážeme vysvětlit, co bude mít na rozpočet největší vliv.
-          </p>
-        </div>
-        <div className="mt-12 grid gap-5 md:grid-cols-3">
-          {factors.map((factor) => (
-            <div key={factor.title} className="card-soft overflow-hidden">
-              <div className="aspect-[16/10] overflow-hidden">
-                <img src={factor.image} alt={factor.title} className="h-full w-full object-cover" />
-              </div>
-              <div className="p-8">
-                <h3 className="text-2xl">{factor.title}</h3>
-                <p className="mt-3 leading-relaxed text-muted-foreground">{factor.body}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-        <p className="mt-10 max-w-3xl text-lg leading-relaxed text-muted-foreground">
-          Neprodáváme zbytečně širší rozsah, než dům skutečně potřebuje. Cílem je navrhnout rozumné
-          řešení podle stavu šachet a potřeb domu nebo správce.
-        </p>
-      </div>
-    </section>
-  );
-}
-
 function Testimonials() {
   const items = [
     {
       quote:
-        "Potřebovali jsme zjistit skutečný stav šachet a zároveň nekomplikovat situaci obyvatelům domu. Oceňujeme jasnou domluvu, klidný průběh prací a to, že se všechno obešlo bez vstupů do jednotlivých bytů.",
-      author: "Ukázková reference",
-      role: "předseda SVJ",
+        "Nechali jsme si vyčistit odvětrávací šachty včetně dezinfekce a byli jsme spokojeni. Vše proběhlo rychle, bez problémů a podle domluvy. Určitě můžeme doporučit",
+      author: "Vlastimil Bartaušic",
+      role: "Předseda SVJ sídl. Dukelských hrdinů 22,23, Břeclav",
     },
     {
       quote:
-        "Na spolupráci si ceníme hlavně věcné komunikace, jasného postupu a toho, že jsme po práci dostali dokumentaci, kterou jsme mohli rovnou založit do evidence domu.",
-      author: "Ukázková reference",
-      role: "správce nemovitosti",
+        "Zdravím pane Tučku i Vašeho kolegu, chtěla bych Vám poděkovat touto cestou za Vaši profesionální a perfektně odvedenou práci v našem bytovém domě, kde jste provedli dezinfekci a odmaštění větracích šachet a tím jste také přispěli ke zkvalitnění bydlení uživatelům jednotlivých bytů. Věřím, že se postupně přidají i další bytové domy a využijí Vašich kvalitních a hlavně potřebných služeb.",
+      author: "Marie Tomková",
+      role: "Předseda SVJ Slovácká 2710/2, Břeclav",
     },
     {
       quote:
-        "Dům nebyl zbytečně zatížený a celý postup byl dobře vysvětlený. Přesně takto má vypadat služba pro SVJ a bytové domy.",
-      author: "Ukázková reference",
-      role: "zástupce bytového družstva",
+        "Jde vidět, že čištění moc pomohlo a šachty jsou v daleko lepším stavu než před čištěním. Určitě Vaši firmu doporučím dalším předsedům! Moc děkuji za výborně odvedenou práci a perfektní jednání! Videa jsou super dokumentace.",
+      author: "Petr Jahoda",
+      role: "Předseda SVJ Pražská 8, Znojmo",
     },
   ];
 
@@ -1046,7 +933,7 @@ function FAQ() {
     {
       question: "Co ovlivňuje cenu?",
       answer:
-        "Hlavně počet šachet, velikost a výška objektu, přístup na střechu, míra zanesení a případné doplňkové práce, například kontrola kamerou nebo dezinfekce.",
+        "Cenu ovlivňuje hlavně počet šachet, velikost a výška objektu, míra zanesení a rozsah požadované dokumentace. Přesnou cenu potvrdíme po úvodním posouzení konkrétního domu.",
     },
   ];
 

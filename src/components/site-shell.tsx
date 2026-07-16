@@ -651,8 +651,8 @@ export function SiteFooter() {
             </span>
           </div>
           <p className="mt-4 max-w-sm text-sm leading-relaxed">
-            Čisté šachty - místní specialista na čištění vzduchových a odvětrávacích šachet pro
-            bytové domy, SVJ a správce nemovitostí v Hodoníně a okolí.
+            Čisté šachty - místní specialista na čištění odvětrávacích šachet pro bytové domy, SVJ a
+            správce nemovitostí v Hodoníně a okolí.
           </p>
         </div>
         <div>
@@ -660,7 +660,7 @@ export function SiteFooter() {
           <ul className="space-y-2 text-sm">
             <li>
               <Link to="/sluzby" className="hover:text-cream">
-                Čištění vzduchových šachet
+                Čištění odvětrávacích šachet
               </Link>
             </li>
             <li>
