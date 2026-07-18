@@ -471,7 +471,7 @@ export function ContactPanel({ standalone = false }: { standalone?: boolean }) {
       ? {
           icon: Phone,
           value: company.phoneDisplay,
-          note: "Telefon pro domluvení kontroly",
+          note: "Telefon",
           href: phoneReady ? company.phoneHref : undefined,
         }
       : null,
@@ -479,7 +479,7 @@ export function ContactPanel({ standalone = false }: { standalone?: boolean }) {
       ? {
           icon: Mail,
           value: company.email,
-          note: "Veřejný kontaktní e-mail",
+          note: "E-mail",
           href: emailReady ? `mailto:${company.email}` : undefined,
         }
       : null,
@@ -487,14 +487,14 @@ export function ContactPanel({ standalone = false }: { standalone?: boolean }) {
       ? {
           icon: MapPin,
           value: company.address,
-          note: "Adresa / sídlo a oblast působení",
+          note: "Sídlo a působnost",
         }
       : null,
     hasValue(company.availability)
       ? {
           icon: Clock,
           value: company.availability,
-          note: "Dostupnost pro telefon a poptávky",
+          note: "Dostupnost",
         }
       : null,
   ].filter(Boolean) as Array<{
@@ -538,17 +538,19 @@ export function ContactPanel({ standalone = false }: { standalone?: boolean }) {
             nejpřesnější odpověď.
           </p>
           {contactItems.length ? (
-            <div className="mt-10 space-y-5">
+            <div className="mt-8 max-w-md divide-y divide-cream/10 overflow-hidden rounded-2xl border border-cream/12 bg-cream/[0.06]">
               {contactItems.map((item) => {
                 const Icon = item.icon;
                 const content = (
                   <>
-                    <span className="grid h-11 w-11 flex-shrink-0 place-items-center rounded-xl bg-cream/10">
-                      <Icon className="h-5 w-5" />
+                    <span className="grid h-9 w-9 flex-shrink-0 place-items-center rounded-lg bg-cream/10">
+                      <Icon className="h-4 w-4" strokeWidth={1.8} />
                     </span>
-                    <div>
-                      <div className="font-display text-xl">{item.value}</div>
-                      <div className="text-sm text-cream/65">{item.note}</div>
+                    <div className="min-w-0">
+                      <div className="text-[11px] font-medium uppercase tracking-wide text-cream/50">
+                        {item.note}
+                      </div>
+                      <div className="text-[15px] font-medium leading-snug">{item.value}</div>
                     </div>
                   </>
                 );
@@ -557,12 +559,15 @@ export function ContactPanel({ standalone = false }: { standalone?: boolean }) {
                   <a
                     key={`${item.note}-${item.value}`}
                     href={item.href}
-                    className="flex items-start gap-4 rounded-3xl border border-cream/12 bg-cream/6 p-4 transition hover:bg-cream/10"
+                    className="flex items-center gap-3 px-4 py-3 transition hover:bg-cream/[0.06]"
                   >
                     {content}
                   </a>
                 ) : (
-                  <div key={`${item.note}-${item.value}`} className="flex items-start gap-4">
+                  <div
+                    key={`${item.note}-${item.value}`}
+                    className="flex items-center gap-3 px-4 py-3"
+                  >
                     {content}
                   </div>
                 );
