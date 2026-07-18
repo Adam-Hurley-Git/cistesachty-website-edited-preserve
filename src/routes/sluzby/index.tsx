@@ -26,13 +26,13 @@ import {
 export const Route = createFileRoute("/sluzby/")({
   head: () => ({
     meta: [
-      { title: "Čištění odvětrávacích šachet | Čisté šachty Hodonín" },
+      { title: "Čištění odvětrávacích šachet | Čisté šachty Břeclav" },
       {
         name: "description",
         content:
-          "Profesionální čištění a dezinfekce odvětrávacích šachet pro bytové domy, SVJ a správce nemovitostí v Hodoníně a okolí. Bez vstupu do bytů, s fotodokumentací a protokolem.",
+          "Profesionální čištění a dezinfekce odvětrávacích šachet pro bytové domy, SVJ a správce nemovitostí v Břeclavi a okolí. Bez vstupu do bytů, s fotodokumentací a protokolem.",
       },
-      { property: "og:title", content: "Čištění odvětrávacích šachet | Čisté šachty Hodonín" },
+      { property: "og:title", content: "Čištění odvětrávacích šachet | Čisté šachty Břeclav" },
       {
         property: "og:description",
         content:
@@ -57,7 +57,7 @@ function ServicesPage() {
             <Accent dark>s doložitelným výsledkem.</Accent>
           </>
         }
-        description="Čištění odvětrávacích šachet pomáhá udržet bytový dům v lepším technickém stavu, omezit šíření zápachu mezi byty a snížit rizika spojená se zanesením. Službu zajišťujeme pro panelové a bytové domy, SVJ, bytová družstva a správce nemovitostí v Hodoníně a okolí."
+        description="Čištění odvětrávacích šachet pomáhá udržet bytový dům v lepším technickém stavu, omezit šíření zápachu mezi byty a snížit rizika spojená se zanesením. Službu zajišťujeme pro panelové a bytové domy, SVJ, bytová družstva a správce nemovitostí v Břeclavi a okolí."
         image={pageImages.service}
         imageAlt="Čištění odvětrávací šachty v bytovém domě"
         primaryCta={{ label: "Domluvit bezplatnou kontrolu", to: "/", hash: "kontakt" }}

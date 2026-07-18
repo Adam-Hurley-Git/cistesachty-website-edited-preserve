@@ -26,7 +26,7 @@ export const company = {
   email: "",
   address: "",
   ico: "",
-  region: "Hodonín a okolí",
+  region: "Břeclav a okolí",
 };
 
 export const navItems = [
@@ -46,7 +46,7 @@ export const heroBadges = [
 ];
 
 export const homeTrustPoints = [
-  "Místní firma pro Hodonín a okolí",
+  "Místní firma pro Břeclav a okolí",
   "Bez vstupu do bytů",
   "Fotodokumentace a protokol po práci",
   "Jasný postup od kontroly po předání dokumentace",
@@ -166,7 +166,7 @@ export const whyItems = [
     icon: ShieldCheck,
   },
   {
-    title: "Místní firma z Hodonína",
+    title: "Místní firma z Břeclavi",
     body: "Lepší dostupnost, rychlejší domluva a znalost typických objektů v regionu.",
     icon: MapPin,
   },
@@ -227,13 +227,13 @@ export const testimonials = [
 ];
 
 export const towns = [
-  "Hodonín",
-  "Kyjov",
-  "Veselí nad Moravou",
-  "Strážnice",
-  "Rohatec",
-  "Dubňany",
-  "Bzenec",
+  "Břeclav",
+  "Valtice",
+  "Lednice",
+  "Mikulov",
+  "Hustopeče",
+  "Podivín",
+  "Lanžhot",
 ];
 
 export const pageImages = {

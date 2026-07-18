@@ -15,11 +15,11 @@ import {
 export const Route = createFileRoute("/o-nas")({
   head: () => ({
     meta: [
-      { title: "O nás | Čisté šachty Hodonín" },
+      { title: "O nás | Čisté šachty Břeclav" },
       {
         name: "description",
         content:
-          "Čisté šachty - místní specialista na čištění odvětrávacích šachet pro bytové domy, SVJ a správce nemovitostí v Hodoníně a okolí.",
+          "Čisté šachty - místní specialista na čištění odvětrávacích šachet pro bytové domy, SVJ a správce nemovitostí v Břeclavi a okolí.",
       },
     ],
   }),
@@ -38,7 +38,7 @@ function AboutPage() {
             <Accent dark>pro bytové domy.</Accent>
           </>
         }
-        description="Čisté šachty vznikly s jednoduchým cílem: nabídnout bytovým domům v Hodoníně a okolí službu, která je úzce zaměřená, srozumitelná a dobře použitelná pro výbory SVJ i správce nemovitostí."
+        description="Čisté šachty vznikly s jednoduchým cílem: nabídnout bytovým domům v Břeclavi a okolí službu, která je úzce zaměřená, srozumitelná a dobře použitelná pro výbory SVJ i správce nemovitostí."
         image={filipTucek}
         imageAlt={`${company.owner} — zakladatel značky ${company.name}`}
         imageFit="contain"
@@ -49,7 +49,7 @@ function AboutPage() {
           {
             icon: MapPin,
             title: "Místní firma",
-            body: "Hodonín a okolí, rychlá domluva",
+            body: "Břeclav a okolí, rychlá domluva",
           },
           {
             icon: Home,
@@ -138,7 +138,7 @@ function AboutPage() {
             eyebrow="Kde působíme"
             title={
               <>
-                Hodonín a okolí —<Accent> jsme kousek od vás.</Accent>
+                Břeclav a okolí —<Accent> jsme kousek od vás.</Accent>
               </>
             }
             body="Nejčastěji obsluhujeme tato města a jejich okolí. Pokud vaše lokalita v seznamu není, napište nám — domluva je otázkou jednoho telefonátu."

@@ -29,7 +29,7 @@ export const Route = createFileRoute("/pro-spravce")({
       {
         name: "description",
         content:
-          "Partner pro správce nemovitostí v Hodoníně a okolí. Čištění odvětrávacích šachet s dokumentací, přehlednou komunikací a minimálním zásahem do provozu domu.",
+          "Partner pro správce nemovitostí v Břeclavi a okolí. Čištění odvětrávacích šachet s dokumentací, přehlednou komunikací a minimálním zásahem do provozu domu.",
       },
     ],
   }),

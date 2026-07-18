@@ -73,17 +73,17 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Čisté šachty — čištění odvětrávacích šachet pro SVJ | Hodonín" },
+      { title: "Čisté šachty — čištění odvětrávacích šachet pro SVJ | Břeclav" },
       {
         name: "description",
         content:
-          "Čištění odvětrávacích šachet pro SVJ, bytová družstva a správce nemovitostí v Hodoníně a okolí. Bez vstupu do bytů, s fotodokumentací a protokolem.",
+          "Čištění odvětrávacích šachet pro SVJ, bytová družstva a správce nemovitostí v Břeclavi a okolí. Bez vstupu do bytů, s fotodokumentací a protokolem.",
       },
       { property: "og:title", content: "Čisté šachty — čištění odvětrávacích šachet pro SVJ" },
       {
         property: "og:description",
         content:
-          "Čištění odvětrávacích šachet pro SVJ, bytová družstva a správce nemovitostí v Hodoníně a okolí.",
+          "Čištění odvětrávacích šachet pro SVJ, bytová družstva a správce nemovitostí v Břeclavi a okolí.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

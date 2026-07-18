@@ -581,7 +581,7 @@ export function ContactPanel({ standalone = false }: { standalone?: boolean }) {
             <Field label="Jméno a příjmení" placeholder="Jméno Příjmení" />
             <Field label="Telefon" type="tel" placeholder="+420 ..." />
             <Field label="E-mail" type="email" placeholder="vas@email.cz" />
-            <Field label="Město / lokalita" placeholder="Hodonín" />
+            <Field label="Město / lokalita" placeholder="Břeclav" />
             <Field label="Typ objektu" placeholder="SVJ / BD / správce" />
             <Field label="Adresa domu" placeholder="Ulice, číslo domu" className="sm:col-span-2" />
           </div>
@@ -651,7 +651,7 @@ export function SiteFooter() {
           </div>
           <p className="mt-4 max-w-sm text-sm leading-relaxed">
             Čisté šachty - místní specialista na čištění odvětrávacích šachet pro bytové domy, SVJ a
-            správce nemovitostí v Hodoníně a okolí.
+            správce nemovitostí v Břeclavi a okolí.
           </p>
         </div>
         <div>

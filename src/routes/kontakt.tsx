@@ -7,11 +7,11 @@ import { Accent, ContactPanel, FaqSection, SectionIntro, SiteShell } from "@/com
 export const Route = createFileRoute("/kontakt")({
   head: () => ({
     meta: [
-      { title: "Kontakt | Čisté šachty Hodonín" },
+      { title: "Kontakt | Čisté šachty Břeclav" },
       {
         name: "description",
         content:
-          "Kontaktujte Čisté šachty. Bezplatná kontrola odvětrávacích šachet pro SVJ, bytová družstva a správce nemovitostí v Hodoníně a okolí.",
+          "Kontaktujte Čisté šachty. Bezplatná kontrola odvětrávacích šachet pro SVJ, bytová družstva a správce nemovitostí v Břeclavi a okolí.",
       },
     ],
   }),
@@ -30,7 +30,7 @@ function ContactPage() {
             eyebrow="Kde působíme"
             title={
               <>
-                Hodonín a okolí —<Accent> přijedeme za vámi.</Accent>
+                Břeclav a okolí —<Accent> přijedeme za vámi.</Accent>
               </>
             }
             body="Nejčastěji obsluhujeme tato města a jejich okolí. Pokud vaše lokalita v seznamu není, napište nám i tak — rádi se domluvíme."

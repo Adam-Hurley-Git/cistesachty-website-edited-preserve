@@ -31,17 +31,17 @@ import { company, towns } from "@/content/site";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Čištění odvětrávacích šachet Hodonín | Čisté šachty" },
+      { title: "Čištění odvětrávacích šachet Břeclav | Čisté šachty" },
       {
         name: "description",
         content:
-          "Čištění odvětrávacích šachet pro SVJ, bytová družstva a správce nemovitostí v Hodoníně a okolí. Bez vstupu do bytů, s fotodokumentací a protokolem.",
+          "Čištění odvětrávacích šachet pro SVJ, bytová družstva a správce nemovitostí v Břeclavi a okolí. Bez vstupu do bytů, s fotodokumentací a protokolem.",
       },
-      { property: "og:title", content: "Čištění odvětrávacích šachet Hodonín | Čisté šachty" },
+      { property: "og:title", content: "Čištění odvětrávacích šachet Břeclav | Čisté šachty" },
       {
         property: "og:description",
         content:
-          "Čištění odvětrávacích šachet pro SVJ, bytová družstva a správce nemovitostí v Hodoníně a okolí.",
+          "Čištění odvětrávacích šachet pro SVJ, bytová družstva a správce nemovitostí v Břeclavi a okolí.",
       },
       { property: "og:url", content: "/" },
     ],
@@ -100,7 +100,7 @@ function Hero() {
         }}
       />
       <div className="container-x relative flex flex-1 flex-col items-center justify-center py-32 text-center">
-        <span className="eyebrow text-forest-light">Hodonín · Jižní Morava</span>
+        <span className="eyebrow text-forest-light">Břeclav · Jižní Morava</span>
         <h1 className="mt-5 max-w-4xl text-5xl font-sans font-medium leading-[1.04] tracking-[-0.04em] text-cream md:text-6xl lg:text-7xl">
           Čisté šachty jako základ požární prevence a bezpečí celého domu.
         </h1>
@@ -126,7 +126,7 @@ function Hero() {
               v: "Práce ze střechy a společných prostor",
             },
             { icon: FileText, k: "Foto + protokol", v: "Doložitelný výstup po každé zakázce" },
-            { icon: MapPin, k: "Místní firma", v: "Hodonín a okolí, rychlá domluva" },
+            { icon: MapPin, k: "Místní firma", v: "Břeclav a okolí, rychlá domluva" },
           ].map((c) => (
             <div
               key={c.k}
@@ -145,7 +145,7 @@ function Hero() {
 
 function TrustBar() {
   const items = [
-    { key: "Místní firma", value: "Pro Hodonín a okolí" },
+    { key: "Místní firma", value: "Pro Břeclav a okolí" },
     { key: "Bez vstupu do bytů", value: "Ve většině případů" },
     { key: "Garance ceny", value: "Porazíme ověřenou nabídku" },
     { key: "Bezplatná kontrola", value: "Nezávazné posouzení na místě" },
@@ -738,7 +738,7 @@ function WhoWeHelp() {
     {
       icon: MapPin,
       title: "Kde působíme",
-      body: `Působíme v Hodoníně a okolí. Nejčastěji obsluhujeme ${towns.join(", ")}.`,
+      body: `Působíme v Břeclavi a okolí. Nejčastěji obsluhujeme ${towns.join(", ")}.`,
     },
   ];
 
@@ -1147,7 +1147,7 @@ function Contact() {
             <Field label="Jméno a příjmení" placeholder="Jméno Příjmení" />
             <Field label="Telefon" type="tel" placeholder="+420 ..." />
             <Field label="E-mail" type="email" placeholder="vas@email.cz" />
-            <Field label="Město / lokalita" placeholder="Hodonín" />
+            <Field label="Město / lokalita" placeholder="Břeclav" />
             <Field label="Typ objektu" placeholder="SVJ / BD / správce" />
             <Field label="Adresa domu" placeholder="Ulice, číslo domu" className="sm:col-span-2" />
           </div>

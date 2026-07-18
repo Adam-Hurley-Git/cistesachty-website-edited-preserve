@@ -25,11 +25,11 @@ import {
 export const Route = createFileRoute("/pro-svj")({
   head: () => ({
     meta: [
-      { title: "Čištění šachet pro SVJ | Čisté šachty Hodonín" },
+      { title: "Čištění šachet pro SVJ | Čisté šachty Břeclav" },
       {
         name: "description",
         content:
-          "Čištění odvětrávacích šachet pro SVJ bez vstupu do bytů. Přehledný postup, fotodokumentace a protokol pro výbor. Hodonín a okolí.",
+          "Čištění odvětrávacích šachet pro SVJ bez vstupu do bytů. Přehledný postup, fotodokumentace a protokol pro výbor. Břeclav a okolí.",
       },
     ],
   }),
