@@ -75,6 +75,7 @@ function HomePage() {
       <Documentation />
       <WhoWeHelp />
       <BeforeAfter />
+      <PricingFactors />
       <Testimonials />
       <FAQ />
       <Contact />
@@ -847,6 +848,60 @@ function Placeholder({ label, tone }: { label: string; tone: "grim" | "clean" })
         {label}
       </span>
     </div>
+  );
+}
+
+function PricingFactors() {
+  const factors = [
+    {
+      title: "Rozsah objektu",
+      body: "Cenu ovlivňuje počet šachet v objektu, velikost domu a výška budovy.",
+      image: cisteni,
+    },
+    {
+      title: "Technické podmínky",
+      body: "Důležitý je konkrétní technický stav domu, míra zanesení šachet a rozsah potřebné dokumentace.",
+      image: kamera,
+    },
+  ];
+
+  return (
+    <section id="cenik" className="bg-secondary py-20 md:py-28">
+      <div className="container-x">
+        <div className="max-w-3xl">
+          <span className="eyebrow">Co ovlivňuje cenu</span>
+          <h2 className="mt-4 text-4xl leading-tight md:text-5xl">
+            Přesnou cenu určíme podle
+            <em className="not-italic" style={{ color: "var(--forest)" }}>
+              {" "}
+              konkrétního domu.
+            </em>
+          </h2>
+          <p className="mt-5 text-lg text-muted-foreground">
+            Přesnou cenu nelze určit bez znalosti konkrétního domu. Každý objekt má jiný počet
+            šachet, jinou výšku, jiné technické řešení i jiný stupeň zanesení. Přesto vám už při
+            první kontrole dokážeme vysvětlit, co bude mít na rozpočet největší vliv.
+          </p>
+        </div>
+        <div className="mt-12 grid gap-5 md:grid-cols-2">
+          {factors.map((factor) => (
+            <div key={factor.title} className="card-soft overflow-hidden">
+              <div className="aspect-[16/10] overflow-hidden">
+                <img src={factor.image} alt={factor.title} className="h-full w-full object-cover" />
+              </div>
+              <div className="p-8">
+                <h3 className="text-2xl">{factor.title}</h3>
+                <p className="mt-3 leading-relaxed text-muted-foreground">{factor.body}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+        <p className="mt-10 max-w-3xl text-lg leading-relaxed text-muted-foreground">
+          Neprodáváme zbytečně širší rozsah, než dům skutečně potřebuje. Cílem je navrhnout rozumné
+          řešení podle stavu šachet a potřeb domu nebo správce.
+        </p>
+      </div>
+    </section>
   );
 }
 
