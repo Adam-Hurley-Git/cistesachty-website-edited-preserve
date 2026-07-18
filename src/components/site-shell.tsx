@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import type { LucideIcon } from "lucide-react";
-import { ArrowRight, Check, Mail, MapPin, Menu, Phone } from "lucide-react";
+import { ArrowRight, Check, Clock, Mail, MapPin, Menu, Phone } from "lucide-react";
 
 import logo from "@/assets/extracted/logo.svg";
 import { company, navItems } from "@/content/site";
@@ -490,6 +490,13 @@ export function ContactPanel({ standalone = false }: { standalone?: boolean }) {
           note: "Adresa / sídlo a oblast působení",
         }
       : null,
+    hasValue(company.availability)
+      ? {
+          icon: Clock,
+          value: company.availability,
+          note: "Dostupnost pro telefon a poptávky",
+        }
+      : null,
   ].filter(Boolean) as Array<{
     icon: typeof Phone;
     value: string;
@@ -637,6 +644,7 @@ export function SiteFooter() {
     hasValue(company.phoneDisplay) ? company.phoneDisplay : null,
     hasValue(company.email) ? company.email : null,
     hasValue(company.address) ? company.address : null,
+    hasValue(company.availability) ? `Dostupnost ${company.availability}` : null,
     hasValue(company.ico) ? `IČO ${company.ico}` : null,
   ].filter(Boolean) as string[];
 

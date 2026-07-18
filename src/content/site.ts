@@ -21,11 +21,12 @@ import sachta from "@/assets/extracted/sachta-kamera.jpg";
 export const company = {
   name: "Čisté šachty",
   owner: "Filip Tuček",
-  phoneDisplay: "",
-  phoneHref: "",
-  email: "",
-  address: "",
-  ico: "",
+  phoneDisplay: "+420 602 106 750",
+  phoneHref: "tel:+420602106750",
+  email: "info@cistesachty.cz",
+  address: "sídl. Dukelských hrdinů 2774/23, 690 02 Břeclav",
+  ico: "22553614",
+  availability: "8:00–17:00",
   region: "Břeclav a okolí",
 };
 

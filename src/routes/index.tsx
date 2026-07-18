@@ -6,6 +6,7 @@ import {
   Calculator,
   Check,
   ClipboardCheck,
+  Clock,
   FileText,
   Home,
   Mail,
@@ -1052,6 +1053,13 @@ function Contact() {
           icon: MapPin,
           value: company.address,
           note: "Adresa / sídlo a oblast působení",
+        }
+      : null,
+    hasValue(company.availability)
+      ? {
+          icon: Clock,
+          value: company.availability,
+          note: "Dostupnost pro telefon a poptávky",
         }
       : null,
   ].filter(Boolean) as Array<{
