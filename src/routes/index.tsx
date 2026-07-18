@@ -77,6 +77,7 @@ function HomePage() {
       <BeforeAfter />
       <Testimonials />
       <FAQ />
+      <Contact />
       <SiteFooter />
     </div>
   );
