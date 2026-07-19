@@ -103,7 +103,10 @@ function Hero() {
       <div className="container-x relative flex flex-1 flex-col items-center justify-center py-32 text-center">
         <span className="eyebrow text-forest-light">Břeclav · Jižní Morava</span>
         <h1 className="mt-5 max-w-4xl text-5xl font-sans font-medium leading-[1.04] tracking-[-0.04em] text-cream md:text-6xl lg:text-7xl">
-          Čisté šachty jako základ požární prevence a bezpečí celého domu.
+          Čisté šachty jako základ požární prevence a{" "}
+          <em className="not-italic" style={{ color: "var(--forest-light)" }}>
+            bezpečí celého domu.
+          </em>
         </h1>
         <p className="mt-7 max-w-2xl text-lg leading-relaxed text-cream/80">
           Profesionální čištění odvětrávacích šachet pro SVJ, bytová družstva a správce. Bez vstupu
@@ -936,10 +939,10 @@ function Testimonials() {
         <div className="max-w-2xl">
           <span className="eyebrow">Reference</span>
           <h2 className="mt-4 text-4xl leading-tight md:text-5xl">
-            Jak má služba působit na výbor,
+            Nejlepší vizitkou naší práce
             <em className="not-italic" style={{ color: "var(--forest)" }}>
               {" "}
-              takto by měly vypadat i reference.
+              jsou spokojené výbory.
             </em>
           </h2>
           <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
