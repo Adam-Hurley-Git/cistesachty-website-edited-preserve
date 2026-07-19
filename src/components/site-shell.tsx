@@ -50,6 +50,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
 
 export function SiteHeader() {
   const phoneReady = hasValue(company.phoneDisplay) && company.phoneHref;
+  const emailReady = hasValue(company.email);
 
   return (
     <header className="absolute left-0 right-0 top-0 z-40">
@@ -73,22 +74,32 @@ export function SiteHeader() {
           ))}
         </nav>
 
-        {phoneReady ? (
-          <a
-            href={company.phoneHref}
-            className="hidden shrink-0 items-center gap-2 whitespace-nowrap text-sm font-semibold text-cream sm:inline-flex"
-          >
-            <Phone className="h-4 w-4" /> {company.phoneDisplay}
-          </a>
-        ) : (
-          <Link
-            to="/"
-            hash="kontakt"
-            className="hidden shrink-0 items-center gap-2 whitespace-nowrap text-sm font-semibold text-cream sm:inline-flex"
-          >
-            <Phone className="h-4 w-4" /> Domluvit kontrolu
-          </Link>
-        )}
+        <div className="hidden shrink-0 items-center gap-5 whitespace-nowrap text-sm font-semibold text-cream sm:flex">
+          {phoneReady ? (
+            <a
+              href={company.phoneHref}
+              className="inline-flex items-center gap-2 transition hover:text-cream/75"
+            >
+              <Phone className="h-4 w-4" /> {company.phoneDisplay}
+            </a>
+          ) : (
+            <Link
+              to="/"
+              hash="kontakt"
+              className="inline-flex items-center gap-2 transition hover:text-cream/75"
+            >
+              <Phone className="h-4 w-4" /> Domluvit kontrolu
+            </Link>
+          )}
+          {emailReady ? (
+            <a
+              href={`mailto:${company.email}`}
+              className="hidden items-center gap-2 transition hover:text-cream/75 sm:inline-flex lg:hidden xl:inline-flex"
+            >
+              <Mail className="h-4 w-4" /> {company.email}
+            </a>
+          ) : null}
+        </div>
 
         {/* Mobile menu */}
         <details className="group lg:hidden">
@@ -107,6 +118,26 @@ export function SiteHeader() {
                   {item.label}
                 </Link>
               ))}
+              {phoneReady || emailReady ? (
+                <div className="mt-2 flex flex-col gap-1 border-t border-border pt-2">
+                  {phoneReady ? (
+                    <a
+                      href={company.phoneHref}
+                      className="flex items-center gap-2 rounded-2xl px-4 py-3 text-sm font-semibold text-foreground transition hover:bg-secondary"
+                    >
+                      <Phone className="h-4 w-4" /> {company.phoneDisplay}
+                    </a>
+                  ) : null}
+                  {emailReady ? (
+                    <a
+                      href={`mailto:${company.email}`}
+                      className="flex items-center gap-2 rounded-2xl px-4 py-3 text-sm font-semibold text-foreground transition hover:bg-secondary"
+                    >
+                      <Mail className="h-4 w-4" /> {company.email}
+                    </a>
+                  ) : null}
+                </div>
+              ) : null}
             </div>
           </div>
         </details>
@@ -646,12 +677,14 @@ function Field({
 
 export function SiteFooter() {
   const footerItems = [
-    hasValue(company.phoneDisplay) ? company.phoneDisplay : null,
-    hasValue(company.email) ? company.email : null,
-    hasValue(company.address) ? company.address : null,
-    hasValue(company.availability) ? `Dostupnost ${company.availability}` : null,
-    hasValue(company.ico) ? `IČO ${company.ico}` : null,
-  ].filter(Boolean) as string[];
+    hasValue(company.phoneDisplay)
+      ? { label: company.phoneDisplay, href: company.phoneHref || undefined }
+      : null,
+    hasValue(company.email) ? { label: company.email, href: `mailto:${company.email}` } : null,
+    hasValue(company.address) ? { label: company.address } : null,
+    hasValue(company.availability) ? { label: `Dostupnost ${company.availability}` } : null,
+    hasValue(company.ico) ? { label: `IČO ${company.ico}` } : null,
+  ].filter(Boolean) as Array<{ label: string; href?: string }>;
 
   return (
     <footer className="bg-ink text-cream/70">
@@ -697,7 +730,15 @@ export function SiteFooter() {
           {footerItems.length ? (
             <ul className="space-y-2 text-sm">
               {footerItems.map((item) => (
-                <li key={item}>{item}</li>
+                <li key={item.label}>
+                  {item.href ? (
+                    <a href={item.href} className="transition hover:text-cream">
+                      {item.label}
+                    </a>
+                  ) : (
+                    item.label
+                  )}
+                </li>
               ))}
             </ul>
           ) : (
