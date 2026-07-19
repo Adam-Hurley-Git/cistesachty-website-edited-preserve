@@ -156,10 +156,12 @@ function TrustBar() {
     <section className="border-y border-border bg-cream/60">
       <div className="container-x grid grid-cols-2 divide-x divide-border md:grid-cols-4">
         {items.map((item) => (
-          <div key={item.key} className="px-4 py-7 text-center">
-            <div className="font-display text-2xl text-primary md:text-3xl">{item.key}</div>
-            <div className="mt-1 text-xs tracking-wide text-muted-foreground md:text-sm">
-              {item.value}
+          <div key={item.key} className="flex flex-col items-center px-4 py-7 text-center">
+            <div className="flex min-h-[2.4em] items-center justify-center font-display text-2xl leading-tight text-primary md:text-3xl">
+              <span className="[text-wrap:balance]">{item.key}</span>
+            </div>
+            <div className="mt-2 flex min-h-[2.6em] items-start justify-center text-xs leading-snug tracking-wide text-muted-foreground md:text-sm">
+              <span className="[text-wrap:balance]">{item.value}</span>
             </div>
           </div>
         ))}
